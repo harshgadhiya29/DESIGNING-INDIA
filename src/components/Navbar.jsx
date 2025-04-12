@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import logo from "../assets/logo.png"; 
+import logo from "../assets/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +13,10 @@ function Navbar() {
           <div className="flex">
             <Link to="/" className="flex-shrink-0 flex items-center space-x-2">
               <img
-                 src={logo}
+                src={logo}
                 alt="Logo"
                 className="h-[300px] w-[300px] object-contain"
               />
-
             </Link>
           </div>
 
@@ -28,6 +27,7 @@ function Navbar() {
             <NavLink to="/services">Services</NavLink>
             <NavLink to="/portfolio">Portfolio</NavLink>
             <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/subscription">Subscription</NavLink>
             <NavLink to="/contact" isButton={true}>Contact</NavLink>
           </div>
 
@@ -75,6 +75,7 @@ function Navbar() {
           <MobileNavLink to="/services" onClick={() => setIsOpen(false)}>Services</MobileNavLink>
           <MobileNavLink to="/portfolio" onClick={() => setIsOpen(false)}>Portfolio</MobileNavLink>
           <MobileNavLink to="/blog" onClick={() => setIsOpen(false)}>Blog</MobileNavLink>
+          <MobileNavLink to="/subscription" onClick={() => setIsOpen(false)} >Subscription</MobileNavLink>
           <MobileNavLink to="/contact" onClick={() => setIsOpen(false)} isButton={true}>Contact</MobileNavLink>
         </div>
       </motion.div>

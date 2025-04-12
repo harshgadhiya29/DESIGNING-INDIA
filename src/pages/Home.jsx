@@ -8,6 +8,7 @@ import TestimonialCard from './TestimonialCard';
 import ProjectCard from './ProjectCard';
 import FAQItem from './FAQItem';
 
+
 function Home() {
   // Initialize AOS
   useEffect(() => {
@@ -24,7 +25,7 @@ function Home() {
     });
 
     return () => {
-      window.removeEventListener('resize', () => {  
+      window.removeEventListener('resize', () => {
         AOS.refresh();
       });
     };
@@ -32,259 +33,240 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-[#00000076]  text-white overflow-hidden">
-     
-<section className="relative overflow-hidden bg-gradient-to-r from-red-700 to-red-900 text-white py-12 md:py-16 lg:py-24">
-      {/* Background pattern */}
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-        }}
-      ></div>
-      
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 sm:px-6">
-          {/* Left side - Text content */}
-          <div className="relative z-10">
-            <div>
-              <h1
-                data-aos="fade-up"
-                data-aos-delay="100"
-                className="text-3xl tracking-tight font-extrabold sm:text-4xl md:text-5xl lg:text-6xl"
-              >
-                <span className="block text-white">Empower Your</span>
-                <span className="block text-red-300 drop-shadow-md">Business Online</span>
-              </h1>
-            </div>
-            <p
-              data-aos="fade-up"
-              data-aos-delay="200"
-              className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl"
-            >
-              We offer comprehensive digital solutions including graphic design, social media management, web development, and video editing to help your business thrive in the digital age.
-            </p>
-            <div className="mt-5 sm:mt-8 sm:flex flex-col sm:flex-row gap-3">
-              <div
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <Link
-                  to="/contact"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
+
+      <section className="relative overflow-hidden bg-gradient-to-r from-red-700 to-red-900 text-white py-12 md:py-16 lg:py-24">
+        {/* Background pattern */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+          }}
+        ></div>
+
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 sm:px-6">
+            {/* Left side - Text content */}
+            <div className="relative z-10">
+              <div>
+                <h1
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  className="text-3xl tracking-tight font-extrabold sm:text-4xl md:text-5xl lg:text-6xl"
                 >
-                  Get Started
-                </Link>
+                  <span className="block text-white">Empower Your</span>
+                  <span className="block text-red-300 drop-shadow-md">Business Online</span>
+                </h1>
               </div>
-              <div
+              <p
                 data-aos="fade-up"
-                data-aos-delay="400"
-                className="mt-3 sm:mt-0"
-              >
-                <Link
-                  to="/services"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-red-500 text-base font-medium rounded-md bg-transparent hover:text-white hover:bg-red-900 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105"
-                >
-                  Our Services
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          {/* Right side - Graphics for mobile & desktop */}
-   
-          <div className="relative mt-10 lg:mt-0 h-64  sm:h-80 md:h-96">
-            {/* Background glow effects */}
-            <div className="absolute w-full h-full">
-              <div className="absolute top-1/4 right-1/4 h-24 sm:h-32 md:h-48 w-24 sm:w-32 md:w-48 bg-red-400/30 rounded-full filter blur-xl"></div>
-              <div className="absolute bottom-1/4 right-1/2 h-16 sm:h-24 md:h-32 w-16 sm:w-24 md:w-32 bg-yellow-400/20 rounded-full filter blur-xl"></div>
-              <div className="absolute top-1/2 right-1/3 h-20 sm:h-32 md:h-40 w-20 sm:w-32 md:w-40 bg-blue-400/20 rounded-full filter blur-xl"></div>
-            </div>
-            
-            {/* Centered arrangement of elements for mobile */}
-            <div className="relative w-full h-full flex justify-center items-center">
-              {/* Desktop Website Mockup */}
-              <div 
-                className="absolute -top-11 lg:right-14 lg:top-6 right-3 z-30 transform perspective-1000 rotate-y-6 rotate-3 transition-all duration-500 hover:rotate-y-0 hover:rotate-0 hover:scale-105 scale-75 sm:scale-90 md:scale-100"
-                data-aos="fade-left"
                 data-aos-delay="200"
+                className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl"
               >
-                <div className="w-48 sm:w-56 md:w-64 h-32 sm:h-36 md:h-40 bg-gray-900 rounded-lg shadow-xl p-2 sm:p-3 transform">
-                  <div className="h-3 sm:h-4 w-full bg-gray-800 flex items-center px-2 rounded-t-sm mb-1 sm:mb-2">
-                    <div className="flex space-x-1">
-                      <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-red-400"></div>
-                      <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-yellow-400"></div>
-                      <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-green-400"></div>
-                    </div>
-                  </div>
-                  <div className="h-24 sm:h-26 md:h-28 w-full bg-white rounded-sm overflow-hidden relative">
-                    <div className="h-3 sm:h-4 w-full bg-blue-600"></div>
-                    <div className="p-2">
-                      <div className="h-1.5 sm:h-2 w-3/4 bg-gray-300 rounded-full mb-1 sm:mb-2"></div>
-                      <div className="h-1.5 sm:h-2 w-1/2 bg-gray-300 rounded-full mb-1 sm:mb-2"></div>
-                      <div className="h-6 sm:h-8 w-full bg-gray-100 rounded-sm mb-1 sm:mb-2"></div>
-                      <div className="flex justify-between">
-                        <div className="h-3 sm:h-4 w-12 sm:w-16 bg-red-600 rounded-sm"></div>
-                        <div className="h-3 sm:h-4 w-12 sm:w-16 bg-gray-200 rounded-sm"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-2 sm:h-3 bg-gray-800 rounded-lg"></div>
+                We offer comprehensive digital solutions including graphic design, social media management, web development, and video editing to help your business thrive in the digital age.
+              </p>
+              <div className="mt-5 sm:mt-8 sm:flex flex-col sm:flex-row gap-3">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <Link
+                    to="/contact"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
+                  >
+                    Get Started
+                  </Link>
                 </div>
-                <div className="absolute -bottom-2 sm:-bottom-3 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-1 bg-gray-800 rounded-lg shadow-lg opacity-75"></div>
-              </div>
-              
-              {/* Video Editing Element */}
-              <div 
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:left-auto lg:right-24 z-20 rotate-2 transition-all duration-500 hover:rotate-0 hover:scale-105 scale-75 sm:scale-90 md:scale-100"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="relative bg-black/80 rounded-xl p-2 shadow-2xl lg:left-7">
-                  <div className="w-44 sm:w-48 md:w-56 h-24 sm:h-28 md:h-32 bg-black rounded-lg overflow-hidden relative">
-                    {/* Video thumbnail with play button */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/10 z-10"></div>
-                    <div className="absolute inset-0 flex items-center justify-center z-20">
-                      <div className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 rounded-full bg-red-600/90 flex items-center justify-center transform transition-transform hover:scale-110 cursor-pointer">
-                        <div className="ml-1 h-0 w-0 border-t-4 sm:border-t-6 border-b-4 sm:border-b-6 border-l-6 sm:border-l-10 border-t-transparent border-b-transparent border-l-white"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Video elements */}
-                    <div className="absolute top-2 right-2 flex space-x-1 z-30">
-                      <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-full bg-red-600/80 flex items-center justify-center">
-                        <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-white"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Video timeline */}
-                    <div className="absolute bottom-0 left-0 right-0 h-4 sm:h-6 bg-black/80 flex items-center px-2 z-20">
-                      <div className="h-1 flex-grow bg-gray-700 rounded-full overflow-hidden">
-                        <div className="h-full w-1/3 bg-red-600"></div>
-                      </div>
-                      <div className="ml-2 text-xs text-white">1:45</div>
-                    </div>
-                    
-                    {/* Floating video elements for decoration */}
-                    <div className="absolute top-3 left-5 h-4 sm:h-6 w-8 sm:w-10 bg-yellow-400/80 rounded-sm transform rotate-12"></div>
-                    <div className="absolute top-10 sm:top-12 left-10 sm:left-12 h-6 sm:h-8 w-6 sm:w-8 bg-blue-400/80 rounded-sm transform -rotate-6"></div>
-                    <div className="absolute bottom-8 left-16 sm:left-20 h-3 sm:h-4 w-8 sm:w-12 bg-green-400/80 rounded-sm transform rotate-3"></div>
-                  </div>
-                  
-                  {/* Video editing tools */}
-                  <div className="flex mt-2 justify-between">
-                    <div className="flex space-x-1">
-                      <div className="h-2 sm:h-3 w-2 sm:w-3 bg-red-600 rounded-sm"></div>
-                      <div className="h-2 sm:h-3 w-2 sm:w-3 bg-red-500 rounded-sm"></div>
-                      <div className="h-2 sm:h-3 w-2 sm:w-3 bg-red-400 rounded-sm"></div>
-                    </div>
-                    <div className="flex space-x-1">
-                      <div className="h-2 sm:h-3 w-4 sm:w-6 bg-gray-700 rounded-sm"></div>
-                      <div className="h-2 sm:h-3 w-4 sm:w-6 bg-gray-700 rounded-sm"></div>
-                    </div>
-                  </div>
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  className="mt-3 sm:mt-0"
+                >
+                  <Link
+                    to="/services"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-red-500 text-base font-medium rounded-md bg-transparent hover:text-white hover:bg-red-900 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105"
+                  >
+                    Our Services
+                  </Link>
                 </div>
               </div>
-              
-              {/* Graphic Design Element */}
-              <div 
-                className="absolute top-2 sm:top-4 left-1 transform -translate-x-1/2 lg:translate-x-0 lg:left-8 lg:top-32 z-40 -rotate-6 perspective-1000 transition-all duration-500 hover:rotate-0 hover:scale-105 scale-75 sm:scale-90 md:scale-100"
-                data-aos="fade-right"
-                data-aos-delay="400"
-              >
-                <div className="relative bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-2xl border border-white/20">
-                  <div className="w-36 sm:w-40 md:w-48 h-36 sm:h-40 md:h-48 bg-white rounded-lg shadow-inner relative overflow-hidden">
-                    {/* Overlapping color circles */}
-                    <div className="absolute top-4 left-4 h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 rounded-full bg-red-500 mix-blend-multiply"></div>
-                    <div className="absolute top-10 sm:top-12 left-12 sm:left-16 h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 rounded-full bg-blue-500 mix-blend-multiply animate-pulse"></div>
-                    <div className="absolute top-4 left-16 sm:left-20 h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 rounded-full bg-yellow-500 mix-blend-multiply"></div>
-                    
-                    {/* Design tools */}
-                    <div className="absolute bottom-2 right-2 flex space-x-1 sm:space-x-2">
-                      <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-md bg-gray-800 flex items-center justify-center">
-                        <div className="h-2 sm:h-3 w-2 sm:w-3 border-2 border-white rounded-sm"></div>
-                      </div>
-                      <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-md bg-gray-800 flex items-center justify-center">
-                        <div className="h-3 sm:h-4 w-0.5 sm:w-1 bg-white transform rotate-45"></div>
-                      </div>
-                      <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-md bg-gray-800 flex items-center justify-center">
-                        <div className="h-2 sm:h-3 w-2 sm:w-3 bg-white rounded-full"></div>
+            </div>
+
+            {/* Right side - Graphics for mobile & desktop */}
+
+            <div className="relative mt-10 lg:mt-0 h-64  sm:h-80 md:h-96">
+              {/* Background glow effects */}
+              <div className="absolute w-full h-full">
+                <div className="absolute top-1/4 right-1/4 h-24 sm:h-32 md:h-48 w-24 sm:w-32 md:w-48 bg-red-400/30 rounded-full filter blur-xl"></div>
+                <div className="absolute bottom-1/4 right-1/2 h-16 sm:h-24 md:h-32 w-16 sm:w-24 md:w-32 bg-yellow-400/20 rounded-full filter blur-xl"></div>
+                <div className="absolute top-1/2 right-1/3 h-20 sm:h-32 md:h-40 w-20 sm:w-32 md:w-40 bg-blue-400/20 rounded-full filter blur-xl"></div>
+              </div>
+
+              {/* Centered arrangement of elements for mobile */}
+              <div className="relative w-full h-full flex justify-center items-center">
+                {/* Desktop Website Mockup */}
+                <div
+                  className="absolute -top-11 lg:right-14 lg:top-6 right-3 z-30 transform perspective-1000 rotate-y-6 rotate-3 transition-all duration-500 hover:rotate-y-0 hover:rotate-0 hover:scale-105 scale-75 sm:scale-90 md:scale-100"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                >
+                  <div className="w-48 sm:w-56 md:w-64 h-32 sm:h-36 md:h-40 bg-gray-900 rounded-lg shadow-xl p-2 sm:p-3 transform">
+                    <div className="h-3 sm:h-4 w-full bg-gray-800 flex items-center px-2 rounded-t-sm mb-1 sm:mb-2">
+                      <div className="flex space-x-1">
+                        <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-red-400"></div>
+                        <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-yellow-400"></div>
+                        <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-green-400"></div>
                       </div>
                     </div>
-                    
-                    {/* Color palette */}
-                    <div className="absolute bottom-2 left-2 flex space-x-1">
-                      <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-red-600 border border-white/50"></div>
-                      <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-blue-600 border border-white/50"></div>
-                      <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-green-600 border border-white/50"></div>
-                      <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-yellow-600 border border-white/50"></div>
-                      <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-purple-600 border border-white/50"></div>
+                    <div className="h-24 sm:h-26 md:h-28 w-full bg-white rounded-sm overflow-hidden relative">
+                      <div className="h-3 sm:h-4 w-full bg-blue-600"></div>
+                      <div className="p-2">
+                        <div className="h-1.5 sm:h-2 w-3/4 bg-gray-300 rounded-full mb-1 sm:mb-2"></div>
+                        <div className="h-1.5 sm:h-2 w-1/2 bg-gray-300 rounded-full mb-1 sm:mb-2"></div>
+                        <div className="h-6 sm:h-8 w-full bg-gray-100 rounded-sm mb-1 sm:mb-2"></div>
+                        <div className="flex justify-between">
+                          <div className="h-3 sm:h-4 w-12 sm:w-16 bg-red-600 rounded-sm"></div>
+                          <div className="h-3 sm:h-4 w-12 sm:w-16 bg-gray-200 rounded-sm"></div>
+                        </div>
+                      </div>
                     </div>
-                    
-                    {/* Floating shapes */}
-                    <div className="absolute top-24 sm:top-28 left-6 sm:left-8 h-6 sm:h-8 w-6 sm:w-8 border-3 sm:border-4 border-gray-800 rounded-sm transform rotate-12"></div>
-                    <div className="absolute top-24 sm:top-28 left-18 sm:left-24 h-6 sm:h-8 w-6 sm:w-8 bg-gray-800 rounded-full transform -rotate-12"></div>
-                    <div className="absolute top-30 sm:top-36 left-12 sm:left-16 h-6 sm:h-8 w-12 sm:w-16 bg-gray-800 transform rotate-45 opacity-80"></div>
+                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-2 sm:h-3 bg-gray-800 rounded-lg"></div>
                   </div>
-                  
-                  {/* Pen tool handle */}
-                  <div className="absolute -right-2 -bottom-2 h-8 sm:h-12 w-3 sm:w-4 bg-gradient-to-b from-gray-600 to-gray-800 rounded-b-lg rounded-t-sm transform rotate-45">
-                    <div className="absolute -top-1 left-0 right-0 h-1.5 sm:h-2 bg-gray-900 rounded-full"></div>
+                  <div className="absolute -bottom-2 sm:-bottom-3 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-1 bg-gray-800 rounded-lg shadow-lg opacity-75"></div>
+                </div>
+
+                {/* Video Editing Element */}
+                <div
+                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:left-auto lg:right-24 z-20 rotate-2 transition-all duration-500 hover:rotate-0 hover:scale-105 scale-75 sm:scale-90 md:scale-100"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <div className="relative bg-black/80 rounded-xl p-2 shadow-2xl lg:left-7">
+                    <div className="w-44 sm:w-48 md:w-56 h-24 sm:h-28 md:h-32 bg-black rounded-lg overflow-hidden relative">
+                      {/* Video thumbnail with play button */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/10 z-10"></div>
+                      <div className="absolute inset-0 flex items-center justify-center z-20">
+                        <div className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 rounded-full bg-red-600/90 flex items-center justify-center transform transition-transform hover:scale-110 cursor-pointer">
+                          <div className="ml-1 h-0 w-0 border-t-4 sm:border-t-6 border-b-4 sm:border-b-6 border-l-6 sm:border-l-10 border-t-transparent border-b-transparent border-l-white"></div>
+                        </div>
+                      </div>
+
+                      {/* Video elements */}
+                      <div className="absolute top-2 right-2 flex space-x-1 z-30">
+                        <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-full bg-red-600/80 flex items-center justify-center">
+                          <div className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-white"></div>
+                        </div>
+                      </div>
+
+                      {/* Video timeline */}
+                      <div className="absolute bottom-0 left-0 right-0 h-4 sm:h-6 bg-black/80 flex items-center px-2 z-20">
+                        <div className="h-1 flex-grow bg-gray-700 rounded-full overflow-hidden">
+                          <div className="h-full w-1/3 bg-red-600"></div>
+                        </div>
+                        <div className="ml-2 text-xs text-white">1:45</div>
+                      </div>
+
+                      {/* Floating video elements for decoration */}
+                      <div className="absolute top-3 left-5 h-4 sm:h-6 w-8 sm:w-10 bg-yellow-400/80 rounded-sm transform rotate-12"></div>
+                      <div className="absolute top-10 sm:top-12 left-10 sm:left-12 h-6 sm:h-8 w-6 sm:w-8 bg-blue-400/80 rounded-sm transform -rotate-6"></div>
+                      <div className="absolute bottom-8 left-16 sm:left-20 h-3 sm:h-4 w-8 sm:w-12 bg-green-400/80 rounded-sm transform rotate-3"></div>
+                    </div>
+
+                    {/* Video editing tools */}
+                    <div className="flex mt-2 justify-between">
+                      <div className="flex space-x-1">
+                        <div className="h-2 sm:h-3 w-2 sm:w-3 bg-red-600 rounded-sm"></div>
+                        <div className="h-2 sm:h-3 w-2 sm:w-3 bg-red-500 rounded-sm"></div>
+                        <div className="h-2 sm:h-3 w-2 sm:w-3 bg-red-400 rounded-sm"></div>
+                      </div>
+                      <div className="flex space-x-1">
+                        <div className="h-2 sm:h-3 w-4 sm:w-6 bg-gray-700 rounded-sm"></div>
+                        <div className="h-2 sm:h-3 w-4 sm:w-6 bg-gray-700 rounded-sm"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Connecting elements and particles - visible on all screen sizes */}
-              <div className="absolute inset-0">
-                {/* Connection lines */}
-                <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 10 }}>
-                  <path d="M60,80 Q80,60 120,90" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none" />
-                  <path d="M140,100 Q180,140 200,90" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none" />
-                  <path d="M220,140 Q260,110 280,150" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none" />
-                </svg>
-                
-                {/* Animated dots */}
-                <div className="absolute top-16 sm:top-20 left-20 sm:left-40 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-red-400 rounded-full animate-ping"></div>
-                <div className="absolute top-24 sm:top-32 right-24 sm:right-32 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-white rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute bottom-12 sm:bottom-16 left-24 sm:left-48 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-yellow-400 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-24 sm:bottom-32 right-12 sm:right-16 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-blue-400 rounded-full animate-ping" style={{ animationDelay: '1.5s' }}></div>
+
+                {/* Graphic Design Element */}
+                <div
+                  className="absolute top-2 sm:top-4 left-1 transform -translate-x-1/2 lg:translate-x-0 lg:left-8 lg:top-32 z-40 -rotate-6 perspective-1000 transition-all duration-500 hover:rotate-0 hover:scale-105 scale-75 sm:scale-90 md:scale-100"
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                >
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-2xl border border-white/20">
+                    <div className="w-36 sm:w-40 md:w-48 h-36 sm:h-40 md:h-48 bg-white rounded-lg shadow-inner relative overflow-hidden">
+                      {/* Overlapping color circles */}
+                      <div className="absolute top-4 left-4 h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 rounded-full bg-red-500 mix-blend-multiply"></div>
+                      <div className="absolute top-10 sm:top-12 left-12 sm:left-16 h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 rounded-full bg-blue-500 mix-blend-multiply animate-pulse"></div>
+                      <div className="absolute top-4 left-16 sm:left-20 h-16 sm:h-20 md:h-24 w-16 sm:w-20 md:w-24 rounded-full bg-yellow-500 mix-blend-multiply"></div>
+
+                      {/* Design tools */}
+                      <div className="absolute bottom-2 right-2 flex space-x-1 sm:space-x-2">
+                        <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-md bg-gray-800 flex items-center justify-center">
+                          <div className="h-2 sm:h-3 w-2 sm:w-3 border-2 border-white rounded-sm"></div>
+                        </div>
+                        <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-md bg-gray-800 flex items-center justify-center">
+                          <div className="h-3 sm:h-4 w-0.5 sm:w-1 bg-white transform rotate-45"></div>
+                        </div>
+                        <div className="h-4 sm:h-6 w-4 sm:w-6 rounded-md bg-gray-800 flex items-center justify-center">
+                          <div className="h-2 sm:h-3 w-2 sm:w-3 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+
+                      {/* Color palette */}
+                      <div className="absolute bottom-2 left-2 flex space-x-1">
+                        <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-red-600 border border-white/50"></div>
+                        <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-blue-600 border border-white/50"></div>
+                        <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-green-600 border border-white/50"></div>
+                        <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-yellow-600 border border-white/50"></div>
+                        <div className="h-3 sm:h-4 w-3 sm:w-4 rounded-sm bg-purple-600 border border-white/50"></div>
+                      </div>
+
+                      {/* Floating shapes */}
+                      <div className="absolute top-24 sm:top-28 left-6 sm:left-8 h-6 sm:h-8 w-6 sm:w-8 border-3 sm:border-4 border-gray-800 rounded-sm transform rotate-12"></div>
+                      <div className="absolute top-24 sm:top-28 left-18 sm:left-24 h-6 sm:h-8 w-6 sm:w-8 bg-gray-800 rounded-full transform -rotate-12"></div>
+                      <div className="absolute top-30 sm:top-36 left-12 sm:left-16 h-6 sm:h-8 w-12 sm:w-16 bg-gray-800 transform rotate-45 opacity-80"></div>
+                    </div>
+
+                    {/* Pen tool handle */}
+                    <div className="absolute -right-2 -bottom-2 h-8 sm:h-12 w-3 sm:w-4 bg-gradient-to-b from-gray-600 to-gray-800 rounded-b-lg rounded-t-sm transform rotate-45">
+                      <div className="absolute -top-1 left-0 right-0 h-1.5 sm:h-2 bg-gray-900 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Connecting elements and particles - visible on all screen sizes */}
+                <div className="absolute inset-0">
+                  {/* Connection lines */}
+                  <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 10 }}>
+                    <path d="M60,80 Q80,60 120,90" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none" />
+                    <path d="M140,100 Q180,140 200,90" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none" />
+                    <path d="M220,140 Q260,110 280,150" stroke="rgba(255,255,255,0.3)" strokeWidth="1" fill="none" />
+                  </svg>
+
+                  {/* Animated dots */}
+                  <div className="absolute top-16 sm:top-20 left-20 sm:left-40 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-red-400 rounded-full animate-ping"></div>
+                  <div className="absolute top-24 sm:top-32 right-24 sm:right-32 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-white rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="absolute bottom-12 sm:bottom-16 left-24 sm:left-48 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-yellow-400 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+                  <div className="absolute bottom-24 sm:bottom-32 right-12 sm:right-16 h-1.5 sm:h-2 w-1.5 sm:w-2 bg-blue-400 rounded-full animate-ping" style={{ animationDelay: '1.5s' }}></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Stats Section */}
       <section className="py-12 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            <StatCard
-              number="250+"
-              label="Happy Clients"
-              animation="fade-up"
-              delay={100}
-            />
-            <StatCard
-              number="500+"
-              label="Projects Completed"
-              animation="fade-up"
-              delay={200}
-            />
-            <StatCard
-              number="1K+"
-              label="Social Media Followers"
-              animation="fade-up"
-              delay={300}
-            />
-            <StatCard
-              number="24/7"
-              label="Customer Support"
-              animation="fade-up"
-              delay={400}
-            />
+            <StatCard number="10+" label="Happy Clients" animation="fade-up" delay={100} />
+            <StatCard number="12+" label="Projects Completed" animation="fade-up" delay={200} />
+            <StatCard number="1500+" label="Social Media Followers" animation="fade-up" delay={300} />
+            <StatCard number="24 Hours" label="Customer Support" animation="fade-up" delay={400} />
           </div>
         </div>
       </section>
+
 
       {/* Services Preview Section */}
       <section className="py-16 relative overflow-hidden bg-white">
