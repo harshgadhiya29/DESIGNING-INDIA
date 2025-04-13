@@ -43,7 +43,7 @@ const StatCard = ({ number, label, animation, delay }) => {
             data-aos-delay={delay}
             className="text-center p-4 bg-gray-100 rounded-xl shadow"
         >
-            <div className="text-3xl text-red-500 font-bold">
+            <div className="text-3xl text-red-600 font-bold">
                 <CountUp end={numericValue} duration={2} delay={delay / 1000} />
                 {suffix}
             </div>

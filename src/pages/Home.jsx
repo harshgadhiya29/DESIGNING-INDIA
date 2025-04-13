@@ -256,12 +256,13 @@ function Home() {
       </section>
 
       {/* Stats Section */}
+      
       <section className="py-12 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            <StatCard number="10+" label="Happy Clients" animation="fade-up" delay={100} />
-            <StatCard number="12+" label="Projects Completed" animation="fade-up" delay={200} />
-            <StatCard number="1500+" label="Social Media Followers" animation="fade-up" delay={300} />
+            <StatCard number="100+" label="Happy Clients" animation="fade-up" delay={100} />
+            <StatCard number="99+" label="Projects Completed" animation="fade-up" delay={200} />
+            <StatCard number="1100+" label="Social Media Followers" animation="fade-up" delay={300} />
             <StatCard number="24 Hours" label="Customer Support" animation="fade-up" delay={400} />
           </div>
         </div>
