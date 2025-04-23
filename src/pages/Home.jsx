@@ -413,24 +413,24 @@ function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <TestimonialCard
               quote="Working with this team transformed our brand identity. The design work exceeded our expectations!"
-              author="Sarah Johnson"
-              company="Tech Innovators"
+              author="Mahendrabhai Gadhiya"
+              company="Hydro Jet Energy"
               animation="flip-left"
               delay={100}
               color="border-red-600"
             />
             <TestimonialCard
               quote="Our social media engagement increased by 200% within just three months of working together."
-              author="Michael Chen"
-              company="Growth Startup"
+              author="Virendrabhai Jethava"
+              company="Sarv Jiv Hitay Foundation"
               animation="flip-up"
               delay={300}
               color="border-gray-800"
             />
             <TestimonialCard
-              quote="The video content they produced helped us secure major funding. Worth every penny."
-              author="Jessica Smith"
-              company="New Ventures Inc."
+              quote="The video content they produced helped us secure major funding. Worth every penny and team sports Good."
+              author="Mayurbhai Thakkar"
+              company="AT Enterprises"
               animation="flip-right"
               delay={500}
               color="border-red-500"
