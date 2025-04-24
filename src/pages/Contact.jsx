@@ -236,6 +236,10 @@ function Contact() {
                       <a className="mt-1 hover:text-red-400 transition duration-300" href="tel:+919106633236">+91 9106633236</a>
                       <br />
                       <a className="mt-1 hover:text-red-400 transition duration-300" href="tel:+919824086408">+91 9824086408</a>
+                      <br />
+                      <a className="mt-1 hover:text-red-400 transition duration-300" href="tel:+916351357299 ">+91 6351357299 </a>
+                      <br />
+                      <a className="mt-1 hover:text-red-400 transition duration-300" href="tel:+919104025028">+91 9104025028</a>
                     </div>
                   </div>
 
