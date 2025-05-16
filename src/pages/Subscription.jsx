@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
+const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/public/Coming Soon.pdf"; // path relative to the public folder
+    link.download = "Coming Soon.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
 function Subscription() {
     // Initialize AOS
     useEffect(() => {
@@ -320,14 +329,24 @@ function Subscription() {
                     <p className="mt-4 text-xl text-indigo-100 max-w-2xl mx-auto">
                         Contact us today for a free consultation and quote for your project.
                     </p>
-                    <div className="mt-8">
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Link
                             to="/contact"
                             className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
                         >
                             Request a Quote
                         </Link>
+                        <button
+                            onClick={handleDownload}
+                            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
+                        >
+                            <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download Brochure
+                        </button>
                     </div>
+
                 </div>
 
                 {/* Animated shapes */}

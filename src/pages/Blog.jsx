@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
+const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/public/Coming Soon.pdf"; // path relative to the public folder
+    link.download = "Coming Soon.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
 function Blog() {
     // Initialize AOS
     useEffect(() => {
@@ -56,7 +65,7 @@ function Blog() {
             readTime: "5 min read",
             image: "https://images.squarespace-cdn.com/content/v1/5b35dc9b36099b1e5fe89cb6/892cd5a8-9e25-48b8-a1a4-36e7c9014480/PIM+SEO.jpg"
         },
-        
+
         {
             title: "Responsive Design: Creating Websites That Work on Any Device",
             excerpt: "Best practices for developing responsive websites that provide optimal user experience across all screen sizes.",
@@ -66,7 +75,7 @@ function Blog() {
             readTime: "8 min read",
             image: "https://zdblogs.zohocorp.com/sites/commerce/insights/files/users/user419/Website%20UI.jpeg"
         },
-        
+
         {
             title: "The Art of Logo Design: Creating Memorable Brand Symbols",
             excerpt: "An in-depth look at what makes logos effective and the process behind creating iconic brand identities.",
@@ -328,14 +337,24 @@ function Blog() {
                     <p className="mt-4 text-xl text-indigo-100">
                         Our experts can help you develop a comprehensive approach that aligns with your business goals.
                     </p>
-                    <div className="mt-8">
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Link
                             to="/contact"
                             className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
                         >
                             Book a Consultation
                         </Link>
+                        <button
+                            onClick={handleDownload}
+                            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
+                        >
+                            <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download Brochure
+                        </button>
                     </div>
+
                 </div>
 
                 {/* Animated shapes */}

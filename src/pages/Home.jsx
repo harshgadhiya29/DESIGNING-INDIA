@@ -8,6 +8,15 @@ import TestimonialCard from './TestimonialCard';
 import ProjectCard from './ProjectCard';
 import FAQItem from './FAQItem';
 
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/public/Coming Soon.pdf"; // path relative to the public folder
+  link.download = "Coming Soon.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
 function Home() {
   // Initialize AOS
@@ -256,7 +265,7 @@ function Home() {
       </section>
 
       {/* Stats Section */}
-      
+
       <section className="py-12 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -561,14 +570,25 @@ function Home() {
           <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
             Get in touch today and let's discuss how we can help your business grow.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
+              className="flex-1 max-w-xs text-center inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg transform transition duration-300 hover:scale-105 shadow-lg"
             >
               Contact Us Now
             </Link>
+            <button
+              onClick={handleDownload}
+              className="flex-1 max-w-xs text-center inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg transform transition duration-300 hover:scale-105 shadow-lg"
+            >
+              <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Brochure
+            </button>
+
           </div>
+
         </div>
 
         {/* Animated shapes */}

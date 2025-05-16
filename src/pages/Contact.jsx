@@ -3,6 +3,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import toast, { Toaster } from 'react-hot-toast';
 
+
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/public/Coming Soon.pdf"; // path relative to the public folder
+  link.download = "Coming Soon.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 function Contact() {
   // Initialize AOS
   useEffect(() => {

@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/public/Coming Soon.pdf"; // path relative to the public folder
+    link.download = "Coming Soon.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
 function Portfolio() {
     // Initialize AOS
     useEffect(() => {
@@ -230,12 +239,15 @@ function Portfolio() {
                         >
                             Start a Project
                         </Link>
-                        <Link
-                            to="/services"
-                            className="ml-4 inline-flex items-center justify-center px-8 py-3 border border-red-600 text-base font-medium rounded-md text-white bg-transparent hover:bg-red-800 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105"
+                        <button
+                            onClick={handleDownload}
+                            className=" ms-3 inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10 transform transition duration-300 hover:scale-105 shadow-lg"
                         >
-                            Explore Services
-                        </Link>
+                            <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download Brochure
+                        </button>
                     </div>
                 </div>
 
